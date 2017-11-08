@@ -36,6 +36,7 @@ def main():
 
             bmr = bmr_value(gender, weight, height, age)
             if bmr != -1:
+                # 占位符打印
                 print('您的性别：{}， 体重：{}公斤，身高：{}厘米，年龄：{}岁'.format(gender, weight, height, age))
                 print('基础代谢率：{}大卡'.format(bmr))
             else:
