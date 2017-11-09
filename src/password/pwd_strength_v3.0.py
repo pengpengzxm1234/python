@@ -1,9 +1,10 @@
 """
     作者：彭鹏
-    版本：2。0
+    版本：3。0
     功能：判断密码强度
-    日期：09／11／2017
+    日期：10／11／2017
     2.0 增加功能：限制密码设置次数；循环的终止
+    3.0 增加功能：保存设置的密码及其对应强度到到文件中
 """
 
 
@@ -63,6 +64,10 @@ def main():
             strength_level += 1
         else:
             print('密码要包含字母！')
+
+        f = open('password_v3.0.txt', 'a')
+        f.write('密码：{}，强度：{}\n'.format(password, strength_level))
+        f.close()
 
         if strength_level == 3:
             print('恭喜！密码强度合格')
