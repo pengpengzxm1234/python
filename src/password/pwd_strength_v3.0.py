@@ -65,7 +65,7 @@ def main():
         else:
             print('密码要包含字母！')
 
-        f = open('password_v3.0.txt', 'a')
+        f = open('password_v3.0.txt', 'a', encoding='utf8')
         f.write('密码：{}，强度：{}\n'.format(password, strength_level))
         f.close()
 
