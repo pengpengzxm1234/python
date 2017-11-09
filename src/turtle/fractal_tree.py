@@ -40,7 +40,7 @@ def main():
     """
     turtle.left(90)
     turtle.penup()
-    turtle.backward(150)
+    turtle.backward(200)
     turtle.pendown()
     turtle.pensize(2)
     draw_branch(120)
