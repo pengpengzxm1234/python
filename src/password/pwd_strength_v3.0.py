@@ -65,8 +65,14 @@ def main():
         else:
             print('密码要包含字母！')
 
-        f = open('password_v3.0.txt', 'a', encoding='utf8')
-        f.write('密码：{}，强度：{}\n'.format(password, strength_level))
+        stenngth_value = '弱'
+        if strength_level == 3:
+            stenngth_value = '强'
+        elif strength_level == 2:
+            stenngth_value = '中'
+
+        f = open('password_v3.0.txt', 'a', encoding='utf8')  # 文件地址默认当前目录
+        f.write('密码：{}，强度：{}\n'.format(password, stenngth_value))
         f.close()
 
         if strength_level == 3:
