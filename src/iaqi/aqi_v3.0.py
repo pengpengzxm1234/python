@@ -1,11 +1,14 @@
 """
     作者：彭鹏
-    版本：2。0
+    版本：3。0
     功能：AQI计算
-    日期：10／11／2017
+    日期：13／11／2017
     2.0增加功能：AQI计算读取、写入json文件
+    3.0增加功能：cvs
 """
 import json
+import csv
+
 
 def process_json_file(filepath):
     """
@@ -23,10 +26,16 @@ def main():
     filepath = input('请输入json文件名称：')
     city_list = process_json_file(filepath)
     city_list.sort(key=lambda city: city['aqi'])
-    top3_list = city_list[:3]
 
-    f = open('top3_aqi.json', mode='w', encoding='utf-8')
-    json.dump(top3_list, f, ensure_ascii=False)
+    lines = []
+    lines.append(list(city_list[0].keys()))  # 第一行数据
+    for city in city_list:
+        lines.append(list(city.values()))
+
+    f = open('aqi.csv',mode='w',encoding='utf-8',newline='')
+    writer = csv.writer(f)
+    for line in lines:
+        writer.writerow(line)
     f.close()
 
 

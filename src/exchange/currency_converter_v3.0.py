@@ -36,10 +36,10 @@ while currency_str_value != 'Q':
         usd_str_value = currency_str_value[:-3]
         # 将字符串转换成数字
         usd_value = eval(usd_str_value)
-        #汇率计算
+        # 汇率计算
         rmb_value = usd_value * USD_VS_RMB
 
-        #输出结果
+        # 输出结果
         print('人名币（CNY）金额是：', rmb_value)
 
     else:
@@ -48,7 +48,6 @@ while currency_str_value != 'Q':
     print('*********************************************************')
     # 带单位的输入
     currency_str_value = input('请输入带单位的货币金额(退出程序请输入Q)：')
-
 
 
 print('程序已退出！')

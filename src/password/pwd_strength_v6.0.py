@@ -121,7 +121,7 @@ def main():
         print('尝试次数过多，密码设置失败！')
 
     # 读操作
-    lines = file_tool.read_from_file()
+    lines =  file_tool.read_from_file()
     print(lines)
 
 if __name__ == '__main__':
