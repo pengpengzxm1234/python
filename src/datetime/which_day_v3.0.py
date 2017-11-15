@@ -18,9 +18,9 @@ def is_leep_year(year):
     is_leep = False
 
     if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0)):
-        is_leep =  True
+        is_leep = True
     else:
-        is_leep =  False
+        is_leep = False
     return is_leep
 
 

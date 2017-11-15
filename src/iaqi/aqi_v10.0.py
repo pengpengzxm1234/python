@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 
+
 def main():
     """
         主函数
@@ -37,7 +38,6 @@ def main():
 
     clean_aqi_data = aqi_data[aqi_data['AQI'] > 0]
 
-
     # 基本统计
     print('AQI最大值：', clean_aqi_data['AQI'].max())
     print('AQI最小值：', clean_aqi_data['AQI'].min())
@@ -49,8 +49,6 @@ def main():
                      figsize=(20, 10))
     plt.savefig('top50_aqi_bar.png')
     plt.show()
-
-
 
 
 if __name__ == '__main__':

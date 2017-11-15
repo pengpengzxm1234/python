@@ -25,5 +25,7 @@ def main():
         if month > 2:
             days += 1
     print('这是第{}天'.format(days))
+
+
 if __name__ == '__main__':
     main()

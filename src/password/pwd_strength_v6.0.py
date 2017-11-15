@@ -33,7 +33,6 @@ class PasswordTool:
                 break
         return has_number
 
-
     def check_letter_exist(self):
         """
             判断字符中是否含有字母
@@ -45,7 +44,6 @@ class PasswordTool:
                 has_letter = True
                 break
         return has_letter
-
 
     def process_password(self):
         # 规则1：密码长度大于8
